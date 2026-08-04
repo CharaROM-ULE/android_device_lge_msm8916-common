@@ -215,6 +215,7 @@ kill_hciattach ()
 logi "init.qcom.bt.sh config = $config"
 case "$config" in
     "onboot")
+        /system/bin/sh /system/etc/init.bt_mac_fix.sh
         program_bdaddr
         config_bt
         exit 0
